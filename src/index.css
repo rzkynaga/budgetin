@@ -1,0 +1,210 @@
+/* Global styles */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  font-family: Poppins;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h3 {
+  text-align: center;
+  font-weight: normal;
+  margin-top: 0;
+  font-size: medium;
+  margin-bottom: 0;
+}
+
+/* Glassmorphism card style */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  color: #f1f1f1;
+}
+
+/* Button styles */
+button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Input and dropdown styles */
+select, input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.tgl {
+  color: #f1f1f1;
+}
+
+.opsi {
+  color: #0f0f0f;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 0;
+  text-align: center;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Table styles */
+table {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+thead {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+thead th {
+  padding: 15px;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+tbody td {
+  padding: 10px;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+/* Filter section */
+#filterSection {
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 20px auto;
+  color: #f1f1f1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* H1 and H2 styles */
+h1, h2 {
+  text-align: center;
+  color: #e0e0e0;
+}
+
+/* Animasi tambahan */
+.card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+  transform: scale(1.02);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .user-info {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  h1, h3 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input, select {
+    width: 100%;
+  }
+
+  .opsi {
+    color: #333;
+  }
+}
+
+/* Responsif untuk layar lebih kecil (mobile) */
+@media (max-width: 480px) {
+  h1, h3 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 10px;
+    margin: 15px auto;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 12px 0;
+  }
+
+  input[type="date"] {
+    width: 100%;
+  }
+}

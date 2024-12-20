@@ -134,7 +134,7 @@ function App() {
       {!isModalOpen && (
         <div>
           <header>
-            <h1>Personal Finance Tracker</h1>
+            <h1>BudgetIn Finance Tracker</h1>
             <h3>Solusi Monitoring Finansialmu!</h3>
             <div className="user-info">
               <p>{user.name}, </p>

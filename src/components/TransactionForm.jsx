@@ -22,36 +22,56 @@ function TransactionForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <select value={type} onChange={(e) => setType(e.target.value)} required>
+    <form onSubmit={handleSubmit} className=" p-6 rounded-lg shadow-lg max-w-lg w-full mx-auto space-y-4">
+      <select
+        value={type}
+        onChange={(e) => setType(e.target.value)}
+        required
+        className="w-full p-3 border border-gray-300 rounded-lg"
+      >
         <option value="" disabled>
           Pilih Tipe
         </option>
-        <option className='opsi' value="income">Pemasukan</option>
-        <option className='opsi' value="expense">Pengeluaran</option>
+        <option className="opsi" value="income">
+          Pemasukan
+        </option>
+        <option className="opsi" value="expense">
+          Pengeluaran
+        </option>
       </select>
+
       <input
         type="text"
         placeholder="Jumlah (Rp)"
         value={amount}
         onChange={handleAmountChange}
         required
+        className="w-full p-3 border border-gray-300 rounded-lg"
       />
+
       <input
         type="text"
         placeholder="Deskripsi"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
         required
+        className="w-full p-3 border border-gray-300 rounded-lg"
       />
+
       <input
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
         required
-        className='tgl'
+        className="w-full p-3 border border-gray-300 rounded-lg"
       />
-      <button type="submit">Tambah Transaksi</button>
+
+      <button
+        type="submit"
+        className="w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+      >
+        Tambah Transaksi
+      </button>
     </form>
   );
 }

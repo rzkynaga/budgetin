@@ -8,18 +8,25 @@ function TransactionForm({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const rawAmount = amount.replace(/\./g, ''); // Hapus format sebelum submit
+    if (!type || !amount || !category || !date) {
+      alert("Semua bidang harus diisi!");
+      return;
+    }
+    const rawAmount = amount.replace(/\./g, ''); 
     onSubmit({ type, amount: parseFloat(rawAmount), category, date });
     setType('');
     setAmount('');
     setCategory('');
     setDate('');
   };
+  
 
   const handleAmountChange = (e) => {
     const rawValue = e.target.value.replace(/[^\d]/g, ''); // Hanya angka
     setAmount(rawValue.replace(/\B(?=(\d{3})+(?!\d))/g, '.')); // Tambahkan titik
   };
+
+  
 
   return (
     <form onSubmit={handleSubmit} className=" p-6 rounded-lg shadow-lg max-w-lg w-full mx-auto space-y-4">

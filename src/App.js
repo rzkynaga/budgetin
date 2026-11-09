@@ -23,13 +23,6 @@ function App() {
     }
   }, []);
 
-  // Menyimpan data transaksi ke LocalStorage
-  const saveTransaction = (transaction) => {
-    const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
-    transactions.unshift(transaction); // Menambahkan transaksi terbaru ke awal array
-    localStorage.setItem("transactions", JSON.stringify(transactions));
-  };
-
   const addTransaction = (formData) => {
     const { type, amount, category, date } = formData;
 
